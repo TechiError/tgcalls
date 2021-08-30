@@ -33,7 +33,7 @@ class VideoTrackTest : public ::testing::Test {
   VideoTrackTest() : frame_source_(640, 480, rtc::kNumMicrosecsPerSec / 30) {
     static const char kVideoTrackId[] = "track_id";
     video_track_source_ = new rtc::RefCountedObject<FakeVideoTrackSource>(
-        /*is_screencast=*/false);
+        /*is_screencast=*/true);
     video_track_ = VideoTrack::Create(kVideoTrackId, video_track_source_,
                                       rtc::Thread::Current());
   }
