@@ -455,7 +455,7 @@ TEST_F(PeerConnectionFactoryTest, CreatePCUsingIPLiteralAddress) {
 // local video track.
 TEST_F(PeerConnectionFactoryTest, LocalRendering) {
   rtc::scoped_refptr<webrtc::FakeVideoTrackSource> source =
-      webrtc::FakeVideoTrackSource::Create(/*is_screencast=*/false);
+      webrtc::FakeVideoTrackSource::Create(/*is_screencast=*/true);
 
   cricket::FakeFrameSource frame_source(1280, 720,
                                         rtc::kNumMicrosecsPerSec / 30);
