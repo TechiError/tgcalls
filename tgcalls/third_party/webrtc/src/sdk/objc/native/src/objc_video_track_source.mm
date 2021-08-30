@@ -44,7 +44,7 @@ ObjCVideoTrackSource::ObjCVideoTrackSource(RTCObjCVideoSourceAdapter *adapter) :
 }
 
 bool ObjCVideoTrackSource::is_screencast() const {
-  return false;
+  return true;
 }
 
 absl::optional<bool> ObjCVideoTrackSource::needs_denoising() const {
