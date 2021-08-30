@@ -121,7 +121,7 @@ class PeerConnectionWrapperForRampUpTest : public PeerConnectionWrapper {
       Clock* clock) {
     video_track_sources_.emplace_back(
         new rtc::RefCountedObject<FrameGeneratorCapturerVideoTrackSource>(
-            config, clock, /*is_screencast=*/false));
+            config, clock, /*is_screencast=*/true));
     video_track_sources_.back()->Start();
     return rtc::scoped_refptr<VideoTrackInterface>(
         pc_factory()->CreateVideoTrack(rtc::CreateRandomUuid(),
