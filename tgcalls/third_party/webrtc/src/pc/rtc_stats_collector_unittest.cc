@@ -240,7 +240,7 @@ class FakeVideoTrackSourceForStats : public VideoTrackSourceInterface {
   ~FakeVideoTrackSourceForStats() override {}
 
   // VideoTrackSourceInterface
-  bool is_screencast() const override { return false; }
+  bool is_screencast() const override { return true; }
   absl::optional<bool> needs_denoising() const override { return false; }
   bool GetStats(VideoTrackSourceInterface::Stats* stats) override {
     stats->input_width = input_width_;
